@@ -4,7 +4,7 @@ func sortMapValues(input map[int]string) (result []string) {
 	keys := make([]int, len(input))
 	i := 0
 	for kay := range input {
-		keys[i] = k
+		keys[i] = kay
 		i++
 	}
 	sort.Ints(keys)
