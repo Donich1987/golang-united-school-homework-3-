@@ -1,13 +1,19 @@
 package homework
+
 import "sort"
+
+
 func sortMapValues(input map[int]string) (result []string) {
-	keys := make([]int, len(input))
-	for key := range input {
-		keys = append(keys, key)
+	//Place your code here
+	keys := make([]int, 0, len(input))
+	value := make([]string, 0, len(input))
+	for i := range input {
+		keys = append(keys, i)
 	}
 	sort.Ints(keys)
-	for k := range keys {
-		result = append(result, input[k])
+	for _, j := range keys {
+		value = append(value, input[j])
+		j++
 	}
-	return result	
+	return value
 }
